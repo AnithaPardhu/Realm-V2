@@ -1,0 +1,38 @@
+project runsetup run in new device:
+
+1) Code copied from pendrive.
+2) In settings.py file database configuration updated.
+3) New database created with database name "updated".
+4) Make sure you installed Mysql. (pip install mysqlclient).
+5) Install pip install pillow,boto3,pytz,razorpay,pkg_resources(error detected while installing : python -m pip install -upgrade pip  ),
+6) Install all above all without missing.
+7) old migrations are removed.(python manage.py makemigrations).
+8) python manage.py makegirations realm.....realm is appname .
+9) python manage.py migrate realm.
+10) insert generes(queries) into the table.
+
+    insert into realm_genres values(1, 'Crime');
+    insert into realm_genres values(2, 'Thriller');
+    insert into realm_genres values(3, 'Romantic');
+    insert into realm_genres values(4, 'Horror');
+    insert into realm_genres values(5, 'Drama');
+    insert into realm_genres values(6, 'Romantic Comedy');
+    insert into realm_genres values(7, 'Science Fiction');
+    insert into realm_genres values(8, 'Action');
+
+11) Run the server using command (python manage.py runserver).
+12) Code running succesfully.
+13) Signup using details.(username- realmuser, password- 123456789)
+14) Signin/login using those credentials.
+15) Create an m3u8 fule using command : ffmpeg -i movie.mp4 -c:v h264 -flags +cgop -g 30 -c:a aac -strict -2 -ac 2 -hls_time 10 -hls_list_size 0 -hls_segment_filename movie_%               03d.ts movie.m3u8.
+16) If this appears (ERROR) 'ffmpeg' is not recognized as an internal or external command,
+operable program or batch file.
+17) Then you need to install ffmpeg by following the steps in the provided link https://phoenixnap.com/kb/ffmpeg-windows.
+18) Allowed host ip address added http://192.168.30.238:8000.
+19) Now start the movie uploading process from admin side --- http://192.168.30.238:8000/movie_upload
+    in this upload Zip files of the appropiate movie. and fill the required details in movie upload page. for scheduled time use this format - 2023-06-14 16:45(example).
+20) uploaded videos by thye team.   
+21) Subscription is also working for payment gateway(razorpay).
+22) while playing the movie ads are not loading from the AWS server.
+23) REALM ott django version application is testing succesfully completed.
+
